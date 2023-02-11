@@ -32,7 +32,7 @@ public class BurgerController {
 			BindingResult result
 			) {
 		if(result.hasErrors()) {
-			return "redirect:/";
+			return "index.jsp";
 		} else {
 			burgerService.createBurger(burger);
 			return "redirect:/";
