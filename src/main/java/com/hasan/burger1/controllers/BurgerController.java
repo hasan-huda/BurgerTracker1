@@ -58,5 +58,11 @@ public class BurgerController {
 			return "redirect:/";
 		}
 	}
+	@RequestMapping(value="/burgers/{id}", method=RequestMethod.DELETE)
+	public String destroy(@PathVariable("id") Long id) {
+		burgerService.deleteBurger(id);
+		return "redirect:/";
+	}
+	
 	
 }

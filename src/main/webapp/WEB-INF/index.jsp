@@ -25,6 +25,7 @@
                             <th>Restaurant Name</th>
                             <th>Rating (Out of 5)</th>
                             <th>Action</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +35,12 @@
                                 <td><c:out value="${burger.restaurant}"/></td>
                                 <td><c:out value="${burger.rating}"/></td>
                                 <td><a href="/${burger.id}/edit">edit</a></td>
+                                <td>
+                                    <form action="/burgers/${burger.id}" method="post">
+                                        <input type="hidden" name="_method" value="delete">
+                                        <input type="submit" value="Delete" class="btn btn-primary">
+                                    </form>
+                                </td>
                             </tr>
                         </c:forEach>
                     </tbody>
