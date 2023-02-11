@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="container">
-        <div class="card">
+        <div class="card mt-3">
             <div class="card-header">
                 <h1>Burger Tracker</h1>
             </div>
@@ -38,7 +38,7 @@
                 </table>
             </div>
         </div>
-        <div class="card">
+        <div class="card mt-3">
             <div class="card-header">
                 <h1>Add A New Burger</h1>
             </div>

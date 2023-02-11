@@ -27,11 +27,13 @@ public class BurgerController {
 		return "index.jsp";
 	}
 	@PostMapping("/")
-	public String create(
+	public String create(Model model,
 			@Valid @ModelAttribute("burger") Burger burger,
 			BindingResult result
 			) {
 		if(result.hasErrors()) {
+			List<Burger> burgers = burgerService.findAll();
+			model.addAttribute("burgers", burgers);
 			return "index.jsp";
 		} else {
 			burgerService.createBurger(burger);
